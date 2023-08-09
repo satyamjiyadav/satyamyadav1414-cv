@@ -1,0 +1,27 @@
+Function overloading is a feature of object-oriented programming where two or more functions can have the same name but different parameters.
+If multiple functions having same name but parameters of the functions should be different is known as Function Overloading.
+
+code:
+
+#include <iostream>
+using namespace std;
+
+
+void add(int a, int b)
+{
+cout << "sum = " << (a + b);
+}
+
+void add(double a, double b)
+{
+	cout << endl << "sum = " << (a + b);
+}
+
+// Driver code
+int main()
+{
+	add(10, 2);
+	add(5.3, 6.2);
+
+	return 0;
+}
