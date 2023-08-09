@@ -1,7 +1,7 @@
 An inline function is a function that is expanded in line when it is called
  An inline function may increase efficiency if it is small.
 
- code:
+ code 1:
 
  #include <iostream>
 using namespace std;
@@ -9,5 +9,56 @@ inline int cube(int s) { return s * s * s; }
 int main()
 {
 	cout << "The cube of 3 is: " << cube(3) << "\n";
+	return 0;
+}
+
+
+
+code 2:
+
+
+
+#include <iostream>
+
+using namespace std;
+
+class solution {
+	int a, b, add, sub;
+
+public:
+	void get();
+	void sum();
+	void difference();
+	
+};
+inline void solution ::get()
+{
+	cout << "Enter first value:";
+	cin >> a;
+	cout << "Enter second value:";
+	cin >> b;
+}
+
+inline void solution ::sum()
+{
+	add = a + b;
+	cout << "Addition of two numbers: " << a + b << "\n";
+}
+
+inline void solution ::difference()
+{
+	sub = a - b;
+	cout << "Difference of two numbers: " << a - b << "\n";
+}
+
+
+int main()
+{
+	
+	solution s;
+	s.get();
+	s.sum();
+	s.difference();
+	
 	return 0;
 }
